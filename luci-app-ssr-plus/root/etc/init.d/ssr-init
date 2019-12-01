@@ -1,0 +1,11 @@
+#!/bin/sh /etc/rc.common
+START=15
+STOP=15
+
+start() {
+    cp /etc/china_ssr.txt /var/china_ssr.txt
+    mkdir -p /tmp/dnsmasq.d && cp -a /etc/dnsmasq.ssr /tmp/ && cp -a /etc/dnsmasq.oversea /tmp/
+    # cp /etc/chinadns_chnroute.txt  /tmp/chinadns_chnroute.txt
+    # mkdir -p /tmp/dnsmasq.d/
+    # cp /etc/dnsmasq.d/accelerated-domains.china.conf  /tmp/dnsmasq.d/accelerated-domains.china.conf
+}
